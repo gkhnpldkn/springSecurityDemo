@@ -10,19 +10,17 @@ import java.util.Collection;
 import java.util.List;
 
 @Data
-@Getter
-@Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Entity
 @Table(name = "app_user")
 public class User implements UserDetails {
     @Id
     @GeneratedValue
     private  Integer id;
-    private  String firstName;
-    private String lastName;
+    private  String firstname;
+    private String lastname;
     private  String email;
     private String password;
     @Enumerated(EnumType.STRING)
